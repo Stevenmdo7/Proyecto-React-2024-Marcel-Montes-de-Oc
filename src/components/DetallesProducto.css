@@ -1,0 +1,30 @@
+/* DetallesProducto.css */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container.zoomed {
+  cursor: zoom-out;
+}
+
+.product-image {
+  max-width: 500px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-container.zoomed .product-image {
+  transform: scale(2);
+}

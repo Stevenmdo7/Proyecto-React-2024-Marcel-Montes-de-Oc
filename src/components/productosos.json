@@ -1,0 +1,131 @@
+[
+    {
+      "id": 1,
+      "descripcion": "Diseñado para dar volumen y brillo a los labios, proporcionando un aspecto más lleno y resplandeciente.",
+      "nombre": "Gloss Voluminizador",
+      "tipo":"Labiales",
+      "precio": 200,
+      "imagen": "imagenees/IMG_20231206_100418742.jpg"
+    },
+    {
+      "id": 2,
+      "descripcion": "Para quienes quieren volumen y definición, trajimos esta máscara de pestañas, que contiene una fórmula súper resistente, brindando un efecto maravilloso desde la primera aplicación.",
+      "nombre": "Rimel Febella",
+      "tipo":"Rimels",
+      "precio": 200,
+      "imagen": "imagenees/IMG_20231206_100549431.jpg"
+    },
+    {
+      "id": 3,
+      "descripcion": "El Labial Matte Fenzza tiene una aplicación ligera, se desliza fácilmente y proporciona un fantástico efecto glamuroso. ",
+      "nombre": "Labial Matte Fenzza",
+      "tipo":"Labiales",
+      "precio": 160,
+      "imagen": "imagenees/IMG_20231206_101022041.jpg"
+    },
+    {
+      "id": 4,
+      "descripcion": "Fortalece la piel, mientras que también se evita la aparición de líneas y arrugas.",
+      "nombre": "Corrector Belle Angel",
+      "tipo":"Correctores",
+      "precio": 250,
+      "imagen": "imagenees/IMG_20231206_101552793.jpg"
+    },
+    {
+      "id": 5,
+      "descripcion": "Ideal para hidratar y proteger los labios. Puede usarse diariamente, antes o despues del lápiz labial. Hay seis fragancias de bálsamos labiales, una más deliciosa que la otra. Protege e hidrata los labios.",
+      "nombre": "Labial Hidratante Vivai",
+      "tipo":"Labiales",
+      "precio": 80,
+      "imagen": "imagenees/IMG_20231206_102031378.jpg"
+    },
+    {
+      "id": 6,
+      "descripcion": "Los rubores Shine de Mahav son hermosos! muy pigmentados y dejan en la piel un acabado súper natural! son rubores para iluminar y hay 4 tonos distintos para elegir! son veganos y cruelty free.",
+      "nombre": "Rubor Mahav",
+      "tipo":"Polvos",
+      "precio": 160,
+      "imagen": "imagenees/IMG_20231206_102302550.jpg"
+    },
+    {
+      "id": 7,
+      "descripcion": "ENJOY! CONTOUR TRIO - RUBOR - ILUMINADOR # ¡DESTACA Y BRILLA!",
+      "nombre": "Paleta iluminador, Rubor y Contorno Enjoy",
+      "tipo":"Polvos",
+      "precio": 260,
+      "imagen": "imagenees/IMG_20231206_102806030.jpg"
+    },
+    {
+      "id": 8,
+      "descripcion": "Con una fórmula de alto brillo, este iluminador proporciona un efecto luminoso y sofisticado, realzando tus rasgos faciales e iluminando tu belleza natural.",
+      "nombre": "Polvo de Hadas",
+      "tipo":"Polvos",
+      "precio": 250,
+      "imagen": "imagenees/IMG_20231206_103136414.jpg"
+    },
+    {
+      "id": 9,
+      "descripcion": "Base de maquillaje líquida de cobertura media con acabado semi mate sobre la piel, su textura fluida es fácil de aplicar y difuminar, dando un aspecto natural y cubriendo bien las imperfecciones de la piel. Con ingredientes buenos para nuestra piel con Aloe Vera y DPantenol.",
+      "nombre": "Base Ruby Rose",
+      "tipo":"Bases",
+      "precio": 380,
+      "imagen": "imagenees/IMG_20231206_103341376.jpg"
+    },
+    {
+      "id": 10,
+      "descripcion": "La Paleta de Sombras de Ojos MEGA EFFECT es ideal para mujeres que quieren tener una paleta compacta con colores superpigmentados y acabado mate. Crea múltiples estilos de maquillaje con esta paleta y lucela.",
+      "nombre": "Sombra Mega Effect",
+      "tipo":"Sombras",
+      "precio": 260,
+      "imagen": "imagenees/IMG_20231206_103608102.jpg"
+    },
+    {
+      "id": 11,
+      "descripcion": "Formulado con excelentes materias primas que no dejan apariencia de piel envejecida. MAHAV COMPACT FACIAL POWDER DAY TO DAY fue desarrollado con un sistema de alta micronización, que produce un polvo fino, de textura delicada, que unifica, matifica y sella el maquillaje con una cobertura natural, además de un tacto seco y aterciopelado. Es el producto perfecto para ayudar a la piel, en el tono adecuado y sin brillos.",
+      "nombre": "Polvo Compacto Manav",
+      "tipo":"Polvos",
+      "precio": 200,
+      "imagen": "imagenees/IMG_20231206_103801813.jpg"
+    },
+    {
+      "id": 12,
+      "descripcion": "Lápices delineadores cremosos y súper pigmentados.",
+      "nombre": "Delineador Pastel Fenzza",
+      "tipo":"Delineadores",
+      "precio": 230,
+      "imagen": "imagenees/IMG_20231206_103939122.jpg"
+    },
+    {
+      "id": 13,
+      "descripcion": "Fórmula de larga duración aprueba de agua, con punta de alta precisión que se desliza fácilmente para cualquier tipo de delineado. Color intenso negro matte de alta definición y Secado Rápido",
+      "nombre": "Delineador Plumon",
+      "tipo":"Delineadores",
+      "precio": 250,
+      "imagen": "imagenees/IMG_20231206_104454746.jpg"
+    },
+    {
+      "id": 14,
+      "descripcion": "Estuche para iluminadores y sombras de ojos Rave Vivai",
+      "nombre": "Sombras Rave",
+      "tipo":"Sombras",
+      "precio": 280,
+      "imagen": "imagenees/IMG_20231206_104652047.jpg"
+    },
+    {
+      "id": 15,
+      "descripcion": "En un formato especial, permite utilizar la esponja por todos sus lados para aplicar bases de maquillaje sin dejar marca, consiguiendo así un resultado más uniforme y natural.",
+      "nombre": "Esponjas Meilys",
+      "tipo":"Esponjas",
+      "precio": 150,
+      "imagen": "imagenees/IMG_20231206_104922554.jpg"
+    },
+    {
+      "id": 16,
+      "descripcion": "Suaves y porosas diseñadas para aplicar y difuminar polvos de maquillaje en el rostro de manera uniforme. Ayudan a lograr un acabado natural y sin líneas, facilitando la aplicación y mezcla de productos en la piel.",
+      "nombre": "Esponjas para Polvo Meilys",
+      "tipo":"Esponjas",
+      "precio": 90,
+      "imagen": "imagenees/IMG_20231206_104943591.jpg"
+    }
+  ]
+  

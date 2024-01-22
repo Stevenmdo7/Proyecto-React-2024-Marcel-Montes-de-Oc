@@ -1,0 +1,93 @@
+.checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #180909;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  color: #fff; /* Añadido para mejorar la legibilidad del texto en el fondo oscuro */
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.product-image {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 20px;
+}
+
+.product-details {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.remove-button {
+  background-color: #e44d4d;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.total {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: calc(100% - 20px); /* Ajuste para el padding */
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.buy-button,
+.whatsapp-button,
+.clear-button {
+  background-color: #093b0a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.whatsapp-logo {
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 10px;
+}
+
+.purchase-message {
+  margin-top: 20px;
+  font-size: 18px;
+}

@@ -1,0 +1,62 @@
+/* ProductosCategoria.css */
+#productos-categoria-container {
+  position: relative;
+  margin-top: 120px;
+}
+
+.productos-lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto-item {
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 20%; /* Ajuste para adaptarse al ancho de la pantalla */
+}
+
+.producto-titulo {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+.producto-imagen {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.producto-boton {
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto-boton:hover {
+  background-color: #0056b3;
+}
+
+.mensaje-animado {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.mensaje-animado.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
