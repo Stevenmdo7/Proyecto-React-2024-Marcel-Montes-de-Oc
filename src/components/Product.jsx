@@ -12,11 +12,13 @@ const Product = ({ id, nombre, descripcion, precio, imagen }) => {
   const handleAgregarAlCarrito = () => {
     agregarAlCarrito({ id, nombre, precio, imagen }, cantidad);
 
- 
     Swal.fire({
-      icon: 'success',
-      title: 'Agregado al carrito',
+      position: "center",
+      icon: "success",
+      title: "Agregado al carrito",
       text: `Se ha agregado ${cantidad} ${nombre} al carrito.`,
+      showConfirmButton: false,
+      timer: 1500
     });
   };
 
@@ -29,38 +31,40 @@ const Product = ({ id, nombre, descripcion, precio, imagen }) => {
   };
 
   return (
-    <div className="product">
-      <img
-        src={imagen}
-        alt={nombre}
-        onClick={openModal}
-        className="product-image"
-      />
-
-      <h3>{nombre}</h3>
-
-      <p>Precio: ${precio}</p>
-
-      <div>
-        <label>Cantidad:</label>
-        <input
-          type="number"
-          value={cantidad}
-          onChange={(e) => setCantidad(e.target.value)}
-          min="1"
+    <div className="product-container">
+      <div className="product">
+        <img
+          src={imagen}
+          alt={nombre}
+          onClick={openModal}
+          className="product-image"
         />
+
+        <h3>{nombre}</h3>
+
+        <p>Precio: ${precio}</p>
+
+        <div>
+          <label>Cantidad:</label>
+          <input
+            type="number"
+            value={cantidad}
+            onChange={(e) => setCantidad(Number(e.target.value))}
+            min="1"
+          />
+        </div>
+
+        <button onClick={handleAgregarAlCarrito}>Agregar al carrito</button>
+
+        <button onClick={openModal}>Ver Detalle</button>
+
+        {modalIsOpen && (
+          <DetallesProductoContainer
+            producto={{ id, nombre, descripcion, precio, imagen }}
+            closeModal={closeModal}
+          />
+        )}
       </div>
-
-      <button onClick={handleAgregarAlCarrito}>Agregar al carrito</button>
-
-      <button onClick={openModal}>Ver Detalle</button>
-
-      {modalIsOpen && (
-        <DetallesProductoContainer
-          producto={{ id, nombre, descripcion, precio, imagen }}
-          closeModal={closeModal}
-        />
-      )}
     </div>
   );
 };

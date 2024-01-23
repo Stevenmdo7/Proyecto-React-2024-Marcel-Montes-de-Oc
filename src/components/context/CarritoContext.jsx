@@ -1,5 +1,8 @@
-// CarritoContext.jsx
 import React, { createContext, useContext, useState } from "react";
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
+import "@sweetalert2/theme-dark/dark.css";
+
 
 const CarritoContext = createContext();
 
@@ -10,7 +13,6 @@ export const CarritoProvider = ({ children }) => {
     const productoExistente = carrito.find((item) => item.producto.id === producto.id);
 
     if (productoExistente) {
-      // Si el producto ya existe en el carrito, actualiza la cantidad
       const nuevoCarrito = carrito.map((item) =>
         item.producto.id === producto.id
           ? { producto: item.producto, cantidad: item.cantidad + cantidad }
@@ -18,7 +20,6 @@ export const CarritoProvider = ({ children }) => {
       );
       setCarrito(nuevoCarrito);
     } else {
-      // Si el producto no existe en el carrito, agrégalo
       setCarrito([...carrito, { producto, cantidad }]);
     }
   };
@@ -39,6 +40,13 @@ export const CarritoProvider = ({ children }) => {
 
   const vaciarCarrito = () => {
     setCarrito([]);
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Se ha vaciado el carrito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   const obtenerCarrito = () => carrito;

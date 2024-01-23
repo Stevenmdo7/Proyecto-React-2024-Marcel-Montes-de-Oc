@@ -69,8 +69,7 @@ input {
 }
 
 .buy-button,
-.whatsapp-button,
-.clear-button {
+.whatsapp-button {
   background-color: #093b0a;
   color: #fff;
   border: none;
@@ -79,12 +78,63 @@ input {
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #156f22;
+    border: 2px solid #fff;
+  }
+}
+.whatsapp-logo {
+  max-width: 45px;
+  max-height: 45px;
+  margin-right: 10px;
+}
+.mercadop-logo {
+  max-width: 45px;
+  max-height: 45px;
+  margin-right: 10px;
+}
+.whatsapp-button-container {
+  text-align: center;
 }
 
-.whatsapp-logo {
-  max-width: 20px;
-  max-height: 20px;
-  margin-right: 10px;
+.mercado-paguito {
+  text-align: center;
+}
+.clear-butonsito {
+  text-align: center;
+}
+
+.mercadopago-button{background-color: rgb(0, 48, 80);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;   
+  &:hover {
+    background-color: rgb(6, 106, 173);
+    border: 2px solid #fff;
+  }
+
+}
+
+.clear-button {
+  background-color: #6c0a0a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;   
+  &:hover {
+    background-color: #a90707;
+    border: 2px solid #fff;
+  }
 }
 
 .purchase-message {
