@@ -1,8 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
 import { useCarrito } from "./context/CarritoContext";
-import Swal from 'sweetalert2';  
-import "./DetallesProductoContainer.css"; 
+import Swal from "sweetalert2";
+import "./DetallesProductoContainer.css";
 
 const DetallesProductoContainer = ({ producto, closeModal }) => {
   const { agregarAlCarrito } = useCarrito();
@@ -15,8 +15,8 @@ const DetallesProductoContainer = ({ producto, closeModal }) => {
 
   const mostrarNotificacion = (productoNombre) => {
     Swal.fire({
-      icon: 'success',
-      title: 'Agregado al carrito',
+      icon: "success",
+      title: "Agregado al carrito",
       text: `Se ha agregado ${productoNombre} al carrito.`,
     });
   };

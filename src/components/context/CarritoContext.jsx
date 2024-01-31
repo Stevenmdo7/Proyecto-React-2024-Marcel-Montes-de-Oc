@@ -3,14 +3,15 @@ import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import "@sweetalert2/theme-dark/dark.css";
 
-
 const CarritoContext = createContext();
 
 export const CarritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
   const agregarAlCarrito = (producto, cantidad) => {
-    const productoExistente = carrito.find((item) => item.producto.id === producto.id);
+    const productoExistente = carrito.find(
+      (item) => item.producto.id === producto.id
+    );
 
     if (productoExistente) {
       const nuevoCarrito = carrito.map((item) =>

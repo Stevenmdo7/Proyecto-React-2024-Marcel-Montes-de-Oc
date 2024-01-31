@@ -18,7 +18,6 @@ const Checkout = () => {
   initMercadoPago("APP_USR-54ac87df-cc39-4bcf-9735-8203dbdaaafa", {
     locale: "es-UY",
   });
-  
 
   const obtenerProductosUnicos = () => {
     const productosUnicos = [];
@@ -90,7 +89,7 @@ const Checkout = () => {
       );
 
       const { id } = response.data;
-      sendEmail(); 
+      sendEmail();
       return id;
     } catch (error) {
       console.log(error);

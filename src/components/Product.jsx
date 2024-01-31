@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useCarrito } from "./context/CarritoContext";
-import Swal from 'sweetalert2';  
+import Swal from "sweetalert2";
 import "./Product.scss";
-import DetallesProductoContainer from "./DetallesProductoContainer"; 
+import DetallesProductoContainer from "./DetallesProductoContainer";
 
 const Product = ({ id, nombre, descripcion, precio, imagen }) => {
   const { agregarAlCarrito } = useCarrito();
@@ -18,7 +18,7 @@ const Product = ({ id, nombre, descripcion, precio, imagen }) => {
       title: "Agregado al carrito",
       text: `Se ha agregado ${cantidad} ${nombre} al carrito.`,
       showConfirmButton: false,
-      timer: 1500
+      timer: 1500,
     });
   };
 
@@ -30,15 +30,26 @@ const Product = ({ id, nombre, descripcion, precio, imagen }) => {
     setModalIsOpen(false);
   };
 
+  const handleIncrementarCantidad = () => {
+    setCantidad((prevCantidad) => Math.max(1, prevCantidad + 1));
+  };
+
+  const handleDecrementarCantidad = () => {
+    setCantidad((prevCantidad) => Math.max(1, prevCantidad - 1));
+  };
+
   const imagenes = [
-    'https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2Faugustine-wong-T0BYurbDK_M-unsplash.jpg?alt=media&token=08cc9e4c-5fe2-4555-92f4-0e9a53cdde3a'
+    "https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2Faugustine-wong-T0BYurbDK_M-unsplash.jpg?alt=media&token=08cc9e4c-5fe2-4555-92f4-0e9a53cdde3a",
   ];
 
   const imagenAleatoria = imagenes[Math.floor(Math.random() * imagenes.length)];
 
   return (
     <div className="product-container">
-      <div className="product" style={{ backgroundImage: `url(${imagenAleatoria})` }}>
+      <div
+        className="product"
+        style={{ backgroundImage: `url(${imagenAleatoria})` }}
+      >
         <img
           src={imagen}
           alt={nombre}
@@ -50,14 +61,14 @@ const Product = ({ id, nombre, descripcion, precio, imagen }) => {
 
         <p>Precio: ${precio}</p>
 
-        <div>
-          <label>Cantidad:</label>
-          <input
-            type="number"
-            value={cantidad}
-            onChange={(e) => setCantidad(Number(e.target.value))}
-            min="1"
-          />
+        <div className="cantidad-container">
+          <button className="square-button" onClick={handleDecrementarCantidad}>
+            -
+          </button>
+          <span className="cantidad">{cantidad}</span>
+          <button className="square-button" onClick={handleIncrementarCantidad}>
+            +
+          </button>
         </div>
 
         <button className="button" onClick={handleAgregarAlCarrito}>

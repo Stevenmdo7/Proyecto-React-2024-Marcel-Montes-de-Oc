@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { getProductsByCategory } from "./firebase.jsx";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DetallesProductoContainer from "./DetallesProductoContainer";
-import "./ProductosCategoria.css"; 
+import "./ProductosCategoria.css";
 
 const ProductosCategoria = ({ categoria }) => {
   const [productosFiltrados, setProductosFiltrados] = useState([]);
@@ -23,7 +23,9 @@ const ProductosCategoria = ({ categoria }) => {
         }
       } catch (error) {
         console.error("Error al obtener productos por categoría:", error);
-        toast.error("Error al cargar productos. Por favor, inténtalo de nuevo.");
+        toast.error(
+          "Error al cargar productos. Por favor, inténtalo de nuevo."
+        );
       }
     };
 
@@ -50,7 +52,10 @@ const ProductosCategoria = ({ categoria }) => {
                 src={producto.imagen}
                 alt={producto.nombre}
               />
-              <button onClick={() => verDetalles(producto)} className="producto-boton">
+              <button
+                onClick={() => verDetalles(producto)}
+                className="producto-boton"
+              >
                 Ver Detalle
               </button>
             </li>

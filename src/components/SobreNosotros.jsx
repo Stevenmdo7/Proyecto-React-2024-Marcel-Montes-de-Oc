@@ -4,12 +4,11 @@ import "./SobreNosotros.css";
 const SobreNosotros = () => {
   return (
     <div className="sobre-nosotros-background">
-
       <div className="sobre-nosotros-container">
         <div className="sobre-nosotros-content">
           <h2 className="titulo-bienvenida">¡Bienvenidos a TyPMaquillaje!</h2>
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2FSin%20t%C3%ADtulo.png?alt=media&token=ec69e926-9bfc-4aba-b839-1998d93f4945"
+            src="https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/IMG_20240128_182752928.jpg?alt=media&token=bf9264e9-6bf3-4db7-945e-7c520424d74f"
             alt="Imagen del creador"
             className="imagen-creador"
           />

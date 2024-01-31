@@ -1,7 +1,7 @@
-@import 'animate.css/animate.min.css';
+@import "animate.css/animate.min.css";
 @font-face {
-  font-family: 'Cremona Sans';
-  src: url('./fonts/Cremona.ttf') format('truetype');
+  font-family: "Cremona Sans";
+  src: url("./fonts/Cremona.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -20,24 +20,22 @@ body {
   padding: 0px;
   z-index: 1000;
   box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.2);
-  display: flex;
+  display: absolute;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .navbar-brand img {
   max-width: 100%;
   height: fixed;
   border-radius: 100%;
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Añadido box-shadow a la transición */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   margin-right: 10px;
 }
 
 .navbar-brand img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px 5px #ffd700; /* Añadido box-shadow con color amarillo */
+  box-shadow: 0 0 10px 5px #a94fcc;
 }
 
 .navbar ul {
@@ -60,13 +58,13 @@ body {
 .cart-widget,
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ffd700;
+  color: #c800ff;
 }
 
 .cart-logo {
@@ -86,14 +84,14 @@ body {
 /* Estilo para la clase "nav-link" */
 
 .nav-link {
-  font-family: 'Cremona Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #ffffff;
-    
-      border: none;
-      border-radius: 8px;
-      margin-top: 1rem;
+  font-family: "Cremona Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
 .nav-item {
@@ -101,7 +99,7 @@ body {
   padding: 10px 15px;
   text-decoration: none;
   color: #ffffff;
-  
+
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -110,7 +108,6 @@ body {
 .react-dropdown-select {
   background-color: #bfacac !important;
   border-color: #ffffff !important;
-  
 }
 
 .react-dropdown-select-dropdown {
@@ -127,8 +124,6 @@ body {
   background-color: #a80000 !important;
 }
 
-
-/* Estilo para la clase "ml-auto" */
 .ml-auto {
   margin-bottom: 15px;
   margin-left: 5px;
@@ -140,8 +135,14 @@ body {
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
 
-/* Estilo para la clase "dropdown-item" */
 .dropdown-item {
   display: block;
   width: 100%;
@@ -151,7 +152,6 @@ body {
   text-decoration: none;
   background-color: #000000ae;
   transition: background-color 0.3s, color 0.3s;
-  
 }
 
 .dropdown-item:hover {

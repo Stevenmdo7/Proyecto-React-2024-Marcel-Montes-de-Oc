@@ -1,31 +1,74 @@
-/* ProductCard.css */
-
 @font-face {
-  font-family: 'Cremona Sans';
-  src: url('./fonts/CremonaSans-Regular.ttf') format('truetype');
+  font-family: "Cremona Sans";
+  src: url("./fonts/CremonaSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .card {
-  font-family: 'Cremona Sans', sans-serif; /* Aplicar la fuente a todo el contenido del componente */
+  font-family: "Cremona Sans", sans-serif;
   transition: transform 0.3s ease;
-  overflow: visible; 
-  position: relative; 
+  overflow: visible;
+  position: relative;
 }
 
 .card.hovered {
   transform: scale(1.1);
-  z-index: 1001; 
+  z-index: 1001;
 }
 
-/* Aplicar la fuente a los párrafos y encabezados h2 dentro del componente */
 .card p,
 .card h2 {
-  font-family: 'Cremona Sans', sans-serif;
+  font-family: "Cremona Sans", sans-serif;
 }
 
-/* Aplicar la fuente al botón */
-.card button {
-  font-family: 'Cremona Sans', sans-serif;
+.cantidad-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 1rem;
+}
+
+.square-button {
+  width: 30px; 
+  height: 30px;
+  background-color: #0d0a21;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 8px; 
+  transition: background 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background: #6d58ff;
+  }
+}
+
+.cantidad {
+  font-family: "Cremona Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #9b28288c;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0;
+}
+
+.button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  background: #2a09ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background: #6d58ff;
+  }
 }

@@ -64,24 +64,12 @@ function App() {
   };
 
   return (
-    
     <CarritoProvider>
-      
       <div className="text-center">
         <NavBar handleChange={handleChange} />
         <Routes>
-        <Route
-            path="/"
-            element={
-             <CarouselComponent />
-            }
-          />
-          <Route
-            path="/catalogo"
-            element={
-              <ItemListContainer />
-            }
-          />
+          <Route path="/" element={<CarouselComponent />} />
+          <Route path="/catalogo" element={<ItemListContainer />} />
           <Route path="/categorias" element={<Categorias />} />
           <Route path="/categorias/:categoria" element={<Categorias />} />
           <Route
@@ -99,7 +87,6 @@ function App() {
           <Route path="/como-pagar" element={<ComoPagar />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={2500} />
-        
       </div>
     </CarritoProvider>
   );

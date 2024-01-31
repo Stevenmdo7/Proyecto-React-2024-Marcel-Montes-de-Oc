@@ -1,18 +1,26 @@
 body {
-  margin-top: 50px; /* Puedes ajustar el valor según sea necesario */
+  margin-top: 10px;
 }
 @font-face {
-  font-family: 'Cremona Sans';
-  src: url('./fonts/cremona-webfont.woff2') format('woff2'),
-       url('./fonts/cremona-webfont.woff') format('woff');
+  font-family: "Cremona Sans";
+  src: url("./fonts/cremona-webfont.woff2") format("woff2"),
+    url("./fonts/cremona-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 h1 {
-  position: relative;
-  z-index: 0;
-  font-family: 'Cremona Sans'; /* Agregado para aplicar la nueva fuente */
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Cremona Sans", sans-serif;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2Fzahrin-lukman-4gR0hMB5Gd8-unsplash.jpg?alt=media&token=c668290f-abfe-4111-8874-778d8c2f9ab1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(14, 4, 4, 0.256);
 }
 
 .CarouselContainer {
@@ -29,5 +37,5 @@ h1 {
 .card.hovered {
   transform: scale(1.1);
   z-index: 1000;
-  font-family: 'Cremona Sans'; /* Agregado para aplicar la nueva fuente */
+  font-family: "Cremona Sans";
 }

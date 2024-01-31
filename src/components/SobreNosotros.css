@@ -15,7 +15,7 @@
 
 .sobre-nosotros-container {
   padding: 20px;
-  margin-top: 70px; 
+  margin-top: 20px;
 }
 
 .sobre-nosotros-content {
@@ -27,14 +27,14 @@
 .titulo-bienvenida {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #ffffff; 
+  color: #ffffff;
   font-family: "Cremona Sans", sans-serif;
   background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2Fzahrin-lukman-4gR0hMB5Gd8-unsplash.jpg?alt=media&token=c668290f-abfe-4111-8874-778d8c2f9ab1");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 10px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); 
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .sobre-nosotros-content p {
@@ -45,19 +45,18 @@
 
 .imagen-creador {
   width: 100%;
-  max-width: 320px; 
-  height: 480px;
-  object-fit: cover;
+  max-width: 320px;
+  height: 520px;
   border-radius: 8px;
   margin-top: 20px;
-  box-shadow: 0 0 10px rgb(241, 179, 179); 
+  box-shadow: 0 0 15px rgba(241, 179, 179, 0.8);
+  image-rendering: optimizeQuality;
 }
-
 
 @media (max-width: 768px) {
   .sobre-nosotros-container {
     padding: 10px;
-    margin-top: 50px; 
+    margin-top: 50px;
   }
 
   .sobre-nosotros-content {

@@ -3,7 +3,10 @@ import { db } from "./firebase";
 
 const getProductsByCategory = async (category) => {
   try {
-    const q = query(collection(db, "Maquillaje"), where("category", "==", category));
+    const q = query(
+      collection(db, "Maquillaje"),
+      where("category", "==", category)
+    );
     const querySnapshot = await getDocs(q);
 
     const products = [];
@@ -28,7 +31,7 @@ const getProductsByCategory = async (category) => {
 
 const getProducts = async () => {
   try {
-    const querySnapshot = await getDocs(collection(db, "Maquillaje")); 
+    const querySnapshot = await getDocs(collection(db, "Maquillaje"));
     const products = [];
     querySnapshot.forEach((doc) => {
       const product = {

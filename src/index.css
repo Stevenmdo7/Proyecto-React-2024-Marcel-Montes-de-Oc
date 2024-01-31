@@ -1,22 +1,21 @@
 @font-face {
-  font-family: 'Cremona Sans';
-  src: url('./components/fonts/cremona-webfont.woff2') format('woff2'),
-       url('./components/fonts/cremona-webfont.woff') format('woff');
+  font-family: "Cremona Sans";
+  src: url("./components/fonts/cremona-webfont.woff2") format("woff2"),
+    url("./components/fonts/cremona-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-
 :root {
-  font-family: 'Cremona Sans', Inter, Avenir, Helvetica, Arial, sans-serif; /* Se añade Cremona Sans al principio de la lista */
+  font-family: "Cremona Sans", Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   overflow-y: visible;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/wallpaperflare.com_wallpaper.jpg?alt=media&token=f5e5d090-e7a9-4a4d-a27e-134b9df74da5");
+  color: rgba(0, 0, 0, 0.87);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/different-cosmetics-types-scattered-beige-table.jpg?alt=media&token=d165bfd2-2289-408f-a258-46e47b9fecc4");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

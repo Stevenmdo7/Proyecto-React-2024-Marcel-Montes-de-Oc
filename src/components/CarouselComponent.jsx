@@ -3,21 +3,26 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProductCard from "./ProductCard";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-import { initializeFirebase2 } from  "./Firebase2";
-import "./CarouselComponent.css"
-import "./Shivalva.css"
+import { initializeFirebase2 } from "./Firebase2";
+import "./CarouselComponent.css";
 
-const dbFirebase2 = initializeFirebase2()
+const dbFirebase2 = initializeFirebase2();
 
 const CarouselComponent = () => {
   const [productData, setProductData] = useState([]);
   const [isCarouselPaused, setIsCarouselPaused] = useState(false);
+  const [isMouseOver, setIsMouseOver] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const querySnapshot = await getDocs(collection(dbFirebase2, "Pasarela"));
-        const products = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+        const querySnapshot = await getDocs(
+          collection(dbFirebase2, "Pasarela")
+        );
+        const products = querySnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
         setProductData(products);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -47,6 +52,16 @@ const CarouselComponent = () => {
     },
   };
 
+  const handleMouseEnter = () => {
+    setIsMouseOver(true);
+    setIsCarouselPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseOver(false);
+    setIsCarouselPaused(false);
+  };
+
   const products = productData.map((item) => (
     <ProductCard
       key={item.id}
@@ -59,14 +74,18 @@ const CarouselComponent = () => {
 
   return (
     <div className="App">
-      <div className="CarouselContainer">
+      <div
+        className="CarouselContainer"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <h1>¡Lo más comprado!</h1>
-        <div className="CarouselWrapper"> 
+        <div className="CarouselWrapper">
           <Carousel
             showDots={true}
             responsive={responsive}
             infinite={true}
-            autoPlay={!isCarouselPaused}
+            autoPlay={!isCarouselPaused && !isMouseOver}
             autoPlaySpeed={2500}
             pauseOnHover={!isCarouselPaused}
           >

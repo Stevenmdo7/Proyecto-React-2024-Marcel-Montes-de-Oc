@@ -1,55 +1,86 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import Dropdown from 'react-dropdown-select';
+import Dropdown from "react-dropdown-select";
 import "./NavBar.css";
 
 const Navbar = ({ handleChange }) => {
   const [menuVisible, setMenuVisible] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const closeMenu = () => {
     setMenuVisible(false);
   };
 
+  const handleScroll = () => {
+    const navbar = document.getElementById("navbar");
+    if (navbar) {
+      const rect = navbar.getBoundingClientRect();
+      const isTop = rect.top === 0;
+      if (isTop) {
+        navbar.style.position = "fixed";
+      } else {
+        navbar.style.position = "relative";
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const options = [
-    { value: '/catalogo', label: 'Catalogo' },
-    { value: '/categorias', label: 'Categorías' },
-    { value: '/contacto', label: 'Contacto' },
-    { value: '/sobre_nosotros', label: 'Sobre nosotros' },
-    { value: '/como-pagar', label: '¿Cómo Comprar?' }
-    
+    { value: "/catalogo", label: "Catalogo" },
+    { value: "/categorias", label: "Categorías" },
+    { value: "/contacto", label: "Contacto" },
+    { value: "/sobre_nosotros", label: "Sobre nosotros" },
+    { value: "/como-pagar", label: "¿Cómo Comprar?" },
   ];
 
   const dropdownStyles = {
     control: (provided) => ({
       ...provided,
-      backgroundColor: '#000',
-      borderColor: '#555',
+      backgroundColor: "#000",
+      borderColor: "#555",
     }),
     menu: (provided) => ({
       ...provided,
-      backgroundColor: '#000',
-      color: '#fff',
+      backgroundColor: "#000",
+      color: "#fff",
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isSelected ? '#555' : '#000',
-      color: '#fff',
+      backgroundColor: state.isSelected ? "#555" : "#000",
+      color: "#fff",
     }),
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container" onMouseEnter={() => setMenuVisible(true)} onMouseLeave={() => setMenuVisible(false)}>
-        <Link to="/" className={`navbar-brand ${menuVisible ? 'animate__slideInDown' : ''}`}>
+    <nav
+      id="navbar"
+      className={`navbar navbar-expand-lg navbar-dark bg-dark ${
+        menuVisible ? "animate__slideInDown" : ""
+      }`}
+    >
+      <div
+        className="container"
+        onMouseEnter={() => setMenuVisible(true)}
+        onMouseLeave={() => setMenuVisible(false)}
+      >
+        <Link to="/" className="navbar-brand">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/logo.png?alt=media&token=f758922c-3327-4a69-9f28-6e619fefe9d7"
             alt="Logo de Maquillaje T y P"
             className="img-fluid"
           />
         </Link>
-        <div className={`collapse navbar-collapse${menuVisible ? ' show' : ''}`} id="navbarNav">
+        <div
+          className={`collapse navbar-collapse${menuVisible ? " show" : ""}`}
+          id="navbarNav"
+        >
           <div className="container justify-content-center">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -57,7 +88,7 @@ const Navbar = ({ handleChange }) => {
                   Inicio
                 </Link>
               </li>
-              <li >
+              <li>
                 <Dropdown
                   options={options}
                   values={[]}

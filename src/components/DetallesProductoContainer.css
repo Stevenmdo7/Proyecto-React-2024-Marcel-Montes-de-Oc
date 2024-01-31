@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Cremona Sans';
-  src: url('./fonts/Cremona.ttf') format('truetype');
+  font-family: "Cremona Sans";
+  src: url("./fonts/Cremona.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .overlay {
-  font-family: 'Cremona Sans', sans-serif;
+  font-family: "Cremona Sans", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +20,7 @@
 }
 
 .modal-content {
-  font-family: 'Cremona Sans', sans-serif;
+  font-family: "Cremona Sans", sans-serif;
   width: 680px;
   height: 420px;
   background-color: black;
@@ -40,14 +40,14 @@
 }
 
 .buttons-container {
-  font-family: 'Cremona Sans', sans-serif;
+  font-family: "Cremona Sans", sans-serif;
   display: flex;
   gap: 10px;
   margin-top: 20px;
 }
 
 .button {
-  font-family: 'Cremona Sans', sans-serif;
+  font-family: "Cremona Sans", sans-serif;
   padding: 10px;
   background-color: #4eb0da;
   color: #ffffff;

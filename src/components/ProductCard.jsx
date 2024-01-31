@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useCarrito } from "./context/CarritoContext";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import "./ProductCard.css";
 
 const ProductCard = (props) => {
@@ -9,12 +9,15 @@ const ProductCard = (props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleAgregarAlCarrito = () => {
-    agregarAlCarrito({
-      id: props.id,
-      nombre: props.name,
-      precio: props.price,
-      imagen: props.img
-    }, cantidad);
+    agregarAlCarrito(
+      {
+        id: props.id,
+        nombre: props.name,
+        precio: props.price,
+        imagen: props.img,
+      },
+      cantidad
+    );
 
     Swal.fire({
       position: "center",
@@ -22,8 +25,16 @@ const ProductCard = (props) => {
       title: "Agregado al carrito",
       text: `Se ha agregado ${cantidad} ${props.name} al carrito.`,
       showConfirmButton: false,
-      timer: 1500
+      timer: 1500,
     });
+  };
+
+  const handleIncrementarCantidad = () => {
+    setCantidad((prevCantidad) => Math.max(1, prevCantidad + 1));
+  };
+
+  const handleDecrementarCantidad = () => {
+    setCantidad((prevCantidad) => Math.max(1, prevCantidad - 1));
   };
 
   return (
@@ -36,18 +47,20 @@ const ProductCard = (props) => {
       <h2>{props.name}</h2>
       <p className="price">${props.price}</p>
       <p>{props.description}</p>
-      <p>
-        <label>Cantidad:</label>
-        <input
-          type="number"
-          value={cantidad}
-          onChange={(e) => setCantidad(Number(e.target.value))}
-          min="1"
-        />
-      </p>
-      <p>
-        <button onClick={handleAgregarAlCarrito}>Agregar al carrito</button>
-      </p>
+      <div className="cantidad-container">
+        <button className="square-button" onClick={handleDecrementarCantidad}>
+          -
+        </button>
+        <span className="cantidad">{cantidad}</span>
+        <button className="square-button" onClick={handleIncrementarCantidad}>
+          +
+        </button>
+      </div>
+      <button className="button" onClick={handleAgregarAlCarrito}>
+        <div>
+          <span>Agregar al carrito</span>
+        </div>
+      </button>
     </div>
   );
 };
