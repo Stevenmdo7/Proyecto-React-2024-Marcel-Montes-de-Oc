@@ -15,9 +15,10 @@ const Checkout = () => {
   const [preferenceId, setPreferenceId] = useState(null);
   const form = useRef();
 
-  initMercadoPago("TEST-487b4b60-7d76-46eb-b6ad-742a4a56b274", {
+  initMercadoPago("APP_USR-54ac87df-cc39-4bcf-9735-8203dbdaaafa", {
     locale: "es-UY",
   });
+  
 
   const obtenerProductosUnicos = () => {
     const productosUnicos = [];
@@ -79,7 +80,7 @@ const Checkout = () => {
       const precio = calcularTotal();
 
       const response = await axios.post(
-        "https://backend-typmaquillahje-m1zkpweon-steven-montes-de-ocas-projects.vercel.app/create_preference",
+        "https://servidor-final-ccppuvqds-steven-montes-de-ocas-projects.vercel.app/create_preference",
         {
           description: nombreYCantidad,
           price: precio,
@@ -89,7 +90,7 @@ const Checkout = () => {
       );
 
       const { id } = response.data;
-      sendEmail(); // <-- Mover la llamada a sendEmail aquí
+      sendEmail(); 
       return id;
     } catch (error) {
       console.log(error);
@@ -150,7 +151,7 @@ const Checkout = () => {
                   0
                 )}
               </span>
-              <span>Precio: ${producto.precio.toFixed(2)}</span>
+              <span>Precio: ${Number(producto.precio).toFixed(2)}</span>
             </div>
             <button
               className="remove-button"

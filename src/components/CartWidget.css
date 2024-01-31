@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Cremona Sans';
+    src: url('./fonts/Cremona.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .cart-widget {
+    font-family: 'Cremona Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ffffff;
+      
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+  }

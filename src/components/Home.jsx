@@ -4,7 +4,7 @@ import ItemListContainer from "./ItemListContainer";
 const Home = () => {
   return (
     <div>
-      <h2>Productos Destacados</h2>
+      <h3>Productos Destacados</h3>
       <ItemListContainer greeting="¡Bienvenido a nuestra tienda!" />
     </div>
   );

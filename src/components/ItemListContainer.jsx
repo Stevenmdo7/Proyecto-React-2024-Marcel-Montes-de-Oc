@@ -27,12 +27,12 @@ function ItemListContainer({ greeting }) {
   }, []);
 
   return (
-    <div className="container mt-4 text-center">
+    <div className="container mt-4 text-center" style={{ overflowY: 'auto', minHeight: '500px' }}>
       <h2
-        className="animate__animated animate__fadeIn"
+        className="animate__animated animate__backInRight welcome-message"
         style={{ marginTop: "70px" }}
       >
-        {greeting}
+        ¡Bienvenidos a nuestra tienda!
       </h2>
       <div className="product-container">
         {productos.map((producto) => (

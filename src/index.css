@@ -1,12 +1,32 @@
+@font-face {
+  font-family: 'Cremona Sans';
+  src: url('./components/fonts/cremona-webfont.woff2') format('woff2'),
+       url('./components/fonts/cremona-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Cremona Sans', Inter, Avenir, Helvetica, Arial, sans-serif; /* Se añade Cremona Sans al principio de la lista */
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
+  overflow-y: visible;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/wallpaperflare.com_wallpaper.jpg?alt=media&token=f5e5d090-e7a9-4a4d-a27e-134b9df74da5");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,87 +34,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.product-image {
-  max-width: 100%;
-  height: auto;
-}
-button {
-  margin: 0.5em;
-  padding: 0.8em 1.5em;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+#content {
+  background-color: rgba(0, 0, 0, 0.7);
+  flex: 1;
+  width: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#background-container {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/wallpaperflare.com_wallpaper.jpg?alt=media&token=f5e5d090-e7a9-4a4d-a27e-134b9df74da5");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Coloca el fondo detrás del contenido */
-}
-
-#content {
-  background-color: rgba(0, 0, 0, 0.7); /* Color de fondo con opacidad */
-  flex: 1; /* Ajusta el tamaño para llenar el espacio restante */
-  width: 100%;
-}
-
-
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  overflow: scroll;
 }

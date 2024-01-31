@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { useCarrito } from "./context/CarritoContext";
-import Swal from 'sweetalert2';  // Importa SweetAlert2
+import Swal from 'sweetalert2';  
 import "react-notifications-component/dist/theme.css";
 import "./DetallesProducto.css";
 
@@ -21,7 +21,7 @@ const DetallesProducto = ({ producto, isOpen, closeModal }) => {
   };
 
   const mostrarNotificacion = (productoNombre) => {
-    // Utiliza SweetAlert2 para mostrar la notificación
+
     Swal.fire({
       icon: 'success',
       title: 'Agregado al carrito',

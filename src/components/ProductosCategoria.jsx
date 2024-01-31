@@ -1,10 +1,9 @@
-// ProductosCategoria.jsx
 import React, { useState, useEffect } from 'react';
 import { getProductsByCategory } from "./firebase.jsx";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DetallesProductoContainer from "./DetallesProductoContainer";
-import "./ProductosCategoria.css"; // Importa el archivo de estilos
+import "./ProductosCategoria.css"; 
 
 const ProductosCategoria = ({ categoria }) => {
   const [productosFiltrados, setProductosFiltrados] = useState([]);
