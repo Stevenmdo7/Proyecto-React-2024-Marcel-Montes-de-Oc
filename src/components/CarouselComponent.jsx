@@ -79,7 +79,7 @@ const CarouselComponent = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <h1>¡Lo más comprado!</h1>
+        <h1>¡Bienvenidos a nuestra tienda!</h1>
         <div className="CarouselWrapper">
           <Carousel
             showDots={true}
@@ -92,6 +92,7 @@ const CarouselComponent = () => {
             {products}
           </Carousel>
         </div>
+        <h2>¡Los mas comprados!</h2>
       </div>
     </div>
   );

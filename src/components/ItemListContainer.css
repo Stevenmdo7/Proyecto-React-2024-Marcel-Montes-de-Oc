@@ -33,7 +33,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap: 0px;
+  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .product-card {

@@ -7,35 +7,32 @@ const ComoPagar = () => {
       <div className="como-pagar-content">
         <h2>¿Cómo Comprar?</h2>
         <p>
-          Realizar una compra en nuestra página es fácil y seguro. Sigue estos
-          simples pasos:
+          ¡Gracias por elegirnos! Aquí te presentamos una guía paso a paso para realizar tu compra de manera fácil y segura:
         </p>
         <ol>
           <li>
-            Presiona "Agregar al carrito" para seleccionar tus productos desde
-            la página de inicio, el catalogo o la sección de categorías.
+            Agrega tus productos al carrito desde el carrusel "Los más comprados", el catálogo o la sección de categorías.
           </li>
           <li>
-            En caso de explorar categorías, haz clic en "Ver detalles" antes de agregar
-            al carrito para obtener información adicional.
+            Si exploras categorías, haz clic en "Ver detalle" antes de agregar al carrito para obtener información adicional.
           </li>
           <li>
-            Ve al carrito y revisa tus productos seleccionados, cantidades y
-            precios antes de proceder.
+            Ve al carrito y revisa tus productos seleccionados, cantidades y precios antes de proceder.
           </li>
           <li>
-            Completa los campos de Nombre, Dirección, Email y Teléfono Móvil
-            para finalizar la compra.
+            Completa los campos de Nombre, Dirección, Email y Teléfono Móvil para finalizar la compra.
           </li>
           <li>
-            Paga en efectivo o mediante transferencia prex utilizando el botón
-            "Comprar a través de Whatsapp". Coordina el pago y envío con nuestro
-            representante.
+            Utiliza los botones "+" y "-" para ajustar la cantidad y luego presiona "Agregar al carrito".
           </li>
           <li>
-            Usa el botón "Comprar a través de Mercado Pago" para realizar pagos
-            seguros en línea. Serás redirigido a una página de agradecimiento, y
-            puedes contactarnos por chat para coordinar el envío.
+            Una vez listo, haz clic en el logo del carrito en la barra de opciones.
+          </li>
+          <li>
+            Selecciona "Comprar a través de Whatsapp" para coordinar el pago en efectivo o por transferencia con nuestro representante.
+          </li>
+          <li>
+            O elige "Comprar a través de Mercado Pago" para realizar pagos seguros en línea. Serás redirigido a una página de agradecimiento donde podrás coordinar el envío.
           </li>
         </ol>
       </div>

@@ -45,8 +45,11 @@ $como-pagar-primary-color: #2c3e50;
     }
 
     ol {
+      font-family: "Cremona Sans", sans-serif;
       list-style-type: decimal;
       margin-left: $como-pagar-list-margin-left;
+      background-color: #00000088;
+      
 
       li {
         margin-bottom: $como-pagar-list-item-margin-bottom;

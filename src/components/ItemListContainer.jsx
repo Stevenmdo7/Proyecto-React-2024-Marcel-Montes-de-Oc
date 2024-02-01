@@ -32,7 +32,7 @@ function ItemListContainer({ greeting }) {
       style={{ overflowY: "auto", minHeight: "500px" }}
     >
       <h1 className="h1" style={{ marginTop: "20px" }}>
-        ¡Bienvenidos a nuestra tienda!
+        Catalogo
       </h1>
       <div className="product-container">
         {productos.map((producto) => (
