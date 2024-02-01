@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Cremona Sans";
+  src: url("./fonts/Cremona.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sobre-nosotros-background {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2Fwallpapertip_makeup-wallpaper_1392025.jpg?alt=media&token=cf64e1cc-e10d-4c2e-8b0d-cf804332d8c4");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.sobre-nosotros-container {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.sobre-nosotros-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-bienvenida {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Cremona Sans", sans-serif;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2Fzahrin-lukman-4gR0hMB5Gd8-unsplash.jpg?alt=media&token=c668290f-abfe-4111-8874-778d8c2f9ab1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.sobre-nosotros-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.imagen-creador {
+  width: 100%;
+  max-width: 320px;
+  height: 520px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(241, 179, 179, 0.8);
+  image-rendering: optimizeQuality;
+}
+
+@media (max-width: 768px) {
+  .sobre-nosotros-container {
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  .sobre-nosotros-content {
+    padding: 10px;
+  }
+
+  .imagen-creador {
+    max-width: 100%;
+    margin-top: 10px;
+    height: auto;
+  }
+}

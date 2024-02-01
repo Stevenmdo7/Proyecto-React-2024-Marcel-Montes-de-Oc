@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Cremona Sans";
+  src: url("./fonts/Cremona.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#productos-categoria-container {
+  position: relative;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.productos-lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.producto-item {
+  flex: 1;
+  min-width: calc(25% - 20px);
+  max-width: calc(50% - 20px);
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.producto-titulo {
+  font-family: "Cremona Sans", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+.producto-imagen {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.producto-boton {
+  font-family: "Cremona Sans", sans-serif;
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto-boton:hover {
+  background-color: #0056b3;
+}
+
+.mensaje-animado {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.mensaje-animado.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+  .producto-item {
+    min-width: calc(33.33% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .producto-item {
+    min-width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .producto-item {
+    min-width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+}

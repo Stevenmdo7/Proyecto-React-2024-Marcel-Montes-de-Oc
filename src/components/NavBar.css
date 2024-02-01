@@ -1,0 +1,156 @@
+@import "animate.css/animate.min.css";
+@font-face {
+  font-family: "Cremona Sans";
+  src: url("./fonts/Cremona.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding-top: 160px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #dcb6fda3;
+  color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 100%;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  margin-right: 10px;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 5px #a94fcc;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin-right: 15px;
+}
+
+.cart-widget,
+.navbar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #c800ff;
+}
+
+.cart-logo {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link {
+  font-family: "Cremona Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.react-dropdown-select {
+  background-color: #bfacac !important;
+  border-color: #ffffff !important;
+}
+
+.react-dropdown-select-dropdown {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+.react-dropdown-select-option {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+.react-dropdown-select-option:hover {
+  background-color: #a80000 !important;
+}
+
+.ml-auto {
+  margin-bottom: 15px;
+  margin-left: 5px;
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+  background-color: #000000ae;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #0037ff;
+  color: #fff;
+}

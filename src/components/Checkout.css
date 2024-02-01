@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Cremona Sans";
+  src: url("./fonts/CremonaSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2Fbrochetita.jpg?alt=media&token=53e57f76-6b01-4209-a621-076ba42600a3");
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  color: #fff;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.product-image {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 20px;
+}
+
+.product-details {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.remove-button,
+.buy-button,
+.whatsapp-button,
+.mercadopago-button,
+.clear-button {
+  font-family: "Cremona Sans", sans-serif;
+}
+
+.remove-button {
+  background-color: #e44d4d;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.total {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.buy-button,
+.whatsapp-button {
+  background-color: #093b0a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover,
+.whatsapp-button:hover {
+  background-color: #156f22;
+  border: 2px solid #fff;
+}
+
+.whatsapp-logo {
+  max-width: 45px;
+  max-height: 45px;
+  margin-right: 10px;
+}
+
+.mercadop-logo {
+  max-width: 45px;
+  max-height: 45px;
+  margin-right: 10px;
+}
+
+.whatsapp-button-container {
+  text-align: center;
+}
+
+.mercado-paguito {
+  text-align: center;
+}
+
+.clear-butonsito {
+  text-align: center;
+}
+
+.mercadopago-button {
+  background-color: rgb(0, 48, 80);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.mercadopago-button:hover {
+  background-color: rgb(6, 106, 173);
+  border: 2px solid #fff;
+}
+
+.clear-button {
+  background-color: #6c0a0a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #a90707;
+  border: 2px solid #fff;
+}
+
+.purchase-message {
+  margin-top: 20px;
+  font-size: 18px;
+}

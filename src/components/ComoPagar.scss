@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Cremona Sans";
+  src: url("./fonts/Cremona.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$como-pagar-background-url: "https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/Background%2F1200x672-2-208298684-JJ-HQ-February-blog-imagery-BAU_1200x672_acf_cropped.jpg?alt=media&token=1f0b1507-1c3d-4ec4-89d0-801a771dfc15";
+$como-pagar-padding: 2rem;
+$como-pagar-font-size: 1.2rem;
+$como-pagar-list-margin-left: 2rem;
+$como-pagar-list-item-margin-bottom: rem;
+$como-pagar-primary-color: #2c3e50;
+
+.como-pagar-container {
+  background-image: url($como-pagar-background-url);
+  background-size: cover;
+  background-position: center;
+  padding: $como-pagar-padding;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(90, 82, 82, 0.8);
+
+  .como-pagar-content {
+    margin-top: 0px;
+    margin-bottom: 21%;
+
+    h2 {
+      font-family: "Cremona Sans", sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    p {
+      font-family: "Cremona Sans", sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #00000042;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    ol {
+      list-style-type: decimal;
+      margin-left: $como-pagar-list-margin-left;
+
+      li {
+        margin-bottom: $como-pagar-list-item-margin-bottom;
+      }
+    }
+  }
+}
