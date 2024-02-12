@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
-import Categorias from "./components/categorias";
 import Checkout from "./components/Checkout";
 import { CarritoProvider } from "./components/context/CarritoContext";
 import { ToastContainer } from "react-toastify";
@@ -66,14 +65,12 @@ function App() {
   return (
     <CarritoProvider>
       <div className="text-center">
-      <div className="app-container">
-        <NavBar handleChange={handleChange} />
+        <div className="app-container">
+          <NavBar handleChange={handleChange} />
         </div>
         <Routes>
           <Route path="/" element={<CarouselComponent />} />
           <Route path="/catalogo" element={<ItemListContainer />} />
-          <Route path="/categorias" element={<Categorias />} />
-          <Route path="/categorias/:categoria" element={<Categorias />} />
           <Route
             path="/checkout"
             element={

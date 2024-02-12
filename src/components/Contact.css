@@ -12,7 +12,22 @@
   background-repeat: no-repeat;
   box-shadow: 0 0 30px rgba(255, 38, 38, 0.631);
 }
-
+.aypapi {
+  margin-top:10px;
+  background: url("https://images.unsplash.com/photo-1614851099511-773084f6911d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 30px rgba(255, 38, 38, 0.631);
+}
+.cosasraras {
+  margin-top:10px;
+  background: url("https://images.unsplash.com/photo-1614851099511-773084f6911d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 30px rgba(255, 38, 38, 0.631);
+}
 .contact-item {
   text-align: center;
   margin-bottom: 7px;

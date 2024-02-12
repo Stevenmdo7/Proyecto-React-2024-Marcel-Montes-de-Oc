@@ -8,7 +8,7 @@ const SobreNosotros = () => {
         <div className="sobre-nosotros-content">
           <h2 className="titulo-bienvenida">¡Bienvenidos a TyPMaquillaje!</h2>
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/fotos-de-ecommerce.appspot.com/o/IMG_20240128_182752928.jpg?alt=media&token=bf9264e9-6bf3-4db7-945e-7c520424d74f"
+            src="https://firebasestorage.googleapis.com/v0/b/typmaquillaje-d61e2.appspot.com/o/Tama%C3%B1os%20nuevisimo%2FIMG_20240128_182752928.jpg?alt=media&token=734a403e-88fa-462d-b898-9be09a6056d8"
             alt="Imagen del creador"
             className="imagen-creador"
           />

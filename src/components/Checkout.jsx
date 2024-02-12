@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { useCarrito } from "./context/CarritoContext";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import emailjs from "@emailjs/browser";
@@ -7,13 +7,12 @@ import "./Checkout.css";
 
 const Checkout = () => {
   const { carrito, eliminarDelCarrito, vaciarCarrito } = useCarrito();
-  const [nombre, setNombre] = useState("");
-  const [emailUsuario, setEmail] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const [direccion, setDireccion] = useState("");
-  const [mensaje, setMensaje] = useState("");
-  const [preferenceId, setPreferenceId] = useState(null);
-  const form = useRef();
+  const [nombre, setNombre] = React.useState("");
+  const [emailUsuario, setEmail] = React.useState("");
+  const [telefono, setTelefono] = React.useState("");
+  const [direccion, setDireccion] = React.useState("");
+  const [mensaje, setMensaje] = React.useState("");
+  const [preferenceId, setPreferenceId] = React.useState(null);
 
   initMercadoPago("APP_USR-54ac87df-cc39-4bcf-9735-8203dbdaaafa", {
     locale: "es-UY",
@@ -57,7 +56,8 @@ const Checkout = () => {
 
   const calcularTotal = () => {
     return carrito.reduce(
-      (total, item) => total + item.producto.precio * item.cantidad,
+      (total, item) =>
+        total + (parseFloat(item.producto.precio) || 0) * item.cantidad,
       0
     );
   };
@@ -79,7 +79,7 @@ const Checkout = () => {
       const precio = calcularTotal();
 
       const response = await axios.post(
-        "https://servidor-final-ccppuvqds-steven-montes-de-ocas-projects.vercel.app/create_preference",
+        "https://funcaplis-steven-montes-de-ocas-projects.vercel.app/create_preference",
         {
           description: nombreYCantidad,
           price: precio,
@@ -139,7 +139,8 @@ const Checkout = () => {
               className="product-image"
             />
             <div className="product-details">
-              <span className="product-name">{producto.nombre}</span>
+              <span className="product-name">Nombre: {producto.nombre}</span>
+              <br />
               <span>
                 Cantidad:{" "}
                 {carrito.reduce(
@@ -150,7 +151,9 @@ const Checkout = () => {
                   0
                 )}
               </span>
+              <br />
               <span>Precio: ${Number(producto.precio).toFixed(2)}</span>
+              <br />
             </div>
             <button
               className="remove-button"
@@ -211,7 +214,7 @@ const Checkout = () => {
         />
       </div>
 
-      <h2>Detalles de pago</h2>
+      <h2>Finaliza tu compra</h2>
 
       <div className="mercado-paguito">
         <button

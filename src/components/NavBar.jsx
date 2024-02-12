@@ -34,7 +34,6 @@ const Navbar = ({ handleChange }) => {
 
   const options = [
     { value: "/catalogo", label: "Catálogo" },
-    { value: "/categorias", label: "Categorías" },
     { value: "/contacto", label: "Contacto" },
     { value: "/sobre_nosotros", label: "Sobre nosotros" },
     { value: "/como-pagar", label: "¿Cómo Comprar?" },

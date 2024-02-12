@@ -9,6 +9,11 @@ export const CarritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
   const agregarAlCarrito = (producto, cantidad) => {
+    if (typeof producto.precio !== "number" || isNaN(producto.precio)) {
+      console.error("Error: El precio del producto no es un número válido.", producto);
+      return;
+    }
+
     const productoExistente = carrito.find(
       (item) => item.producto.id === producto.id
     );

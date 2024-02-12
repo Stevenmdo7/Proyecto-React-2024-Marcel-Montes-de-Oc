@@ -5,6 +5,22 @@
   font-style: normal;
 }
 
+.quantity-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -30px; /* Ajusta el margen según sea necesario */
+}
+
+.quantity-container button {
+  margin: 0 5px; /* Ajusta el espacio entre los botones */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+
 .overlay {
   font-family: "Cremona Sans", sans-serif;
   position: fixed;
@@ -23,13 +39,19 @@
   font-family: "Cremona Sans", sans-serif;
   width: 680px;
   height: 420px;
-  background-color: black;
+  background-color: rgba(126, 86, 149, 0.877);
   border: 2px solid silver;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 50px;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .product-image {
@@ -37,6 +59,58 @@
   max-height: 300px;
   width: auto;
   height: auto;
+  cursor: zoom-in;
+}
+
+.image-navigation {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 20px; /* Ajustamos el espacio entre los botones */
+}
+
+.toggle-buttonn {
+  font-family: "Cremona Sans", sans-serif;
+  background-color: #0093d2;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  margin-right: 140px;
+  margin-left: 110px;
+}
+
+.left-arrow {
+  order: 5;
+}
+
+.right-arrow {
+  order: 6;
+}
+
+.zoom-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.zoom-buttons button {
+  padding: 8px 12px;
+  background-color: #36627585;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.zoom-buttons button:hover {
+  background-color: #2e8bad;
 }
 
 .buttons-container {

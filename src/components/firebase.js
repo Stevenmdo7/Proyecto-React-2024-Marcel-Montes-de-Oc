@@ -1,13 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBtq4tNi77jj0wNLw3QvnF6F9KZIzHJJWk",
-  authDomain: "proyecto-e-commerce-bc512.firebaseapp.com",
-  projectId: "proyecto-e-commerce-bc512",
-  storageBucket: "proyecto-e-commerce-bc512.appspot.com",
-  messagingSenderId: "570622130430",
-  appId: "1:570622130430:web:455fdb56215500f2ca8daf",
+const firebaseConfig =  {
+  apiKey: "AIzaSyCygD4lfcjwr7qswTCZQYMlZxAZtKpDkUk",
+  authDomain: "typmaquillaje-d61e2.firebaseapp.com",
+  projectId: "typmaquillaje-d61e2",
+  storageBucket: "typmaquillaje-d61e2.appspot.com",
+  messagingSenderId: "570796123175",
+  appId: "1:570796123175:web:1d130589adef9a71711a02"
 };
 
 const app = initializeApp(firebaseConfig);

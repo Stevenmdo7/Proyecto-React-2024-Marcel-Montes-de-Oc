@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig2 = {
-  apiKey: "AIzaSyC63HTu7IOl-sgFzGynS60CBptbRE9pd0U",
-  authDomain: "reactjs-pasarella.firebaseapp.com",
-  projectId: "reactjs-pasarella",
-  storageBucket: "reactjs-pasarella.appspot.com",
-  messagingSenderId: "217369262242",
-  appId: "1:217369262242:web:641604d1309b0a1d2d7ffb",
+  apiKey: "AIzaSyCOWDYryt_G4KkcjPuu4aZiE3fg8lQGzTU",
+  authDomain: "typ-pasarela.firebaseapp.com",
+  projectId: "typ-pasarela",
+  storageBucket: "typ-pasarela.appspot.com",
+  messagingSenderId: "430983060512",
+  appId: "1:430983060512:web:2eb90e39f63c2e6479b045"
 };
 
 let app2;

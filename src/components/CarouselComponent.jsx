@@ -22,6 +22,7 @@ const CarouselComponent = () => {
         const products = querySnapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
+          showAlternateImage: false,
         }));
         setProductData(products);
       } catch (error) {
@@ -31,6 +32,26 @@ const CarouselComponent = () => {
 
     fetchData();
   }, []);
+
+  const handleMouseEnter = () => {
+    setIsMouseOver(true);
+    setIsCarouselPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseOver(false);
+    setIsCarouselPaused(false);
+  };
+
+  const handleToggleAlternateImage = (productId) => {
+    setProductData((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === productId
+          ? { ...product, showAlternateImage: !product.showAlternateImage }
+          : product
+      )
+    );
+  };
 
   const responsive = {
     superLargeDesktop: {
@@ -43,34 +64,10 @@ const CarouselComponent = () => {
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 800, min: 464 },
+      breakpoint: { max: 800, min: 0 },
       items: 2,
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
   };
-
-  const handleMouseEnter = () => {
-    setIsMouseOver(true);
-    setIsCarouselPaused(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsMouseOver(false);
-    setIsCarouselPaused(false);
-  };
-
-  const products = productData.map((item) => (
-    <ProductCard
-      key={item.id}
-      name={item.name}
-      img={item.img}
-      price={item.price}
-      description={item.description}
-    />
-  ));
 
   return (
     <div className="App">
@@ -89,7 +86,23 @@ const CarouselComponent = () => {
             autoPlaySpeed={2500}
             pauseOnHover={!isCarouselPaused}
           >
-            {products}
+            {productData.map((item) => (
+              <div className="card-container" key={item.id}>
+                <ProductCard
+                  id={item.id}
+                  name={item.name}
+                  img={item.img}
+                  img2={item.img2}
+                  price={item.price}
+                  description={item.description}
+                  showAlternateImage={item.showAlternateImage}
+                  model={Object.keys(item)
+                    .filter((key) => key.startsWith("model"))
+                    .map((key) => item[key])}
+                  onToggleAlternateImage={handleToggleAlternateImage}
+                />
+              </div>
+            ))}
           </Carousel>
         </div>
         <h2>¡Los mas comprados!</h2>
